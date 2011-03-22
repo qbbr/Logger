@@ -25,9 +25,10 @@ class Q_Logger_Autoloader
         }
 
         if ($class == 'Q_Logger') {
-            $file = dirname(__FILE__) . DS . 'Logger.php';
+            $file = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Logger.php';
         } else {
-            $file = dirname(dirname(__FILE__))  . DS . str_replace('_', DS, str_replace('Q_', '', $class)) . '.php';
+            $file = dirname(dirname(__FILE__))  . DIRECTORY_SEPARATOR
+                  . str_replace('_', DIRECTORY_SEPARATOR, str_replace('Q_', '', $class)) . '.php';
         }
 
         if (file_exists($file)) {
