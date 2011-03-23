@@ -13,7 +13,6 @@ class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
     /**
      * @param string $from От кого
      * @param string $to Кому
-     * @throws Q_Logger_Exception Если administrator_mail пустой
      */
     public function __construct($to, $from = null)
     {
