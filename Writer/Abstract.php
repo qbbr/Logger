@@ -90,7 +90,7 @@ abstract class Q_Logger_Writer_Abstract
         } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             return $_SERVER['HTTP_X_FORWARDED_FOR'];
         } else {
-            return $_SERVER['REMOTE_ADDR'];
+            return isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
         }
     }
 }
