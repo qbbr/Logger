@@ -12,7 +12,7 @@ class Q_Logger_Writer_File extends Q_Logger_Writer_Abstract
     protected $_file;
 
     /**
-     * @param string $file Путь до файла
+     * @param string $file Path to log file
      * @throws Q_Logger_Writer_Exception
      */
     public function __construct($file)

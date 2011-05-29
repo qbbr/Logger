@@ -9,14 +9,14 @@
  */
 class Q_Logger
 {
-    const LOG_EMERG = 0; // system is unusable
-    const LOG_ALERT = 1; // action must be taken immediately
-    const LOG_CRIT = 2; // critical conditions
-    const LOG_ERR = 3; // error conditions
+    const LOG_EMERG = 0;   // system is unusable
+    const LOG_ALERT = 1;   // action must be taken immediately
+    const LOG_CRIT = 2;    // critical conditions
+    const LOG_ERR = 3;     // error conditions
     const LOG_WARNING = 4; // warning conditions
-    const LOG_NOTICE = 5; // normal, but significant, condition
-    const LOG_INFO = 6; // informational message
-    const LOG_DEBUG = 7; // debug-level message
+    const LOG_NOTICE = 5;  // normal, but significant, condition
+    const LOG_INFO = 6;    // informational message
+    const LOG_DEBUG = 7;   // debug-level message
 
     /**
      * @var Q_Logger_Writer_Abstract

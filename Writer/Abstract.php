@@ -10,7 +10,7 @@
 abstract class Q_Logger_Writer_Abstract
 {
     /**
-     * Записать в лог
+     * Write to log
      *
      * @param string $message Сообщение
      * @param integer $priority Приоритет
@@ -23,7 +23,7 @@ abstract class Q_Logger_Writer_Abstract
     abstract protected function _write($message, $priority);
 
     /**
-     * Получить текущее время
+     * Get current datetime
      *
      * @access protected
      * @return string
@@ -34,7 +34,7 @@ abstract class Q_Logger_Writer_Abstract
     }
 
     /**
-     * Получить название приоритета
+     * Get priority name
      *
      * @access protected
      * @param integer $priority
@@ -81,7 +81,7 @@ abstract class Q_Logger_Writer_Abstract
     }
 
     /**
-     * Получить IP адресс
+     * Get client ip
      * 
      * @return string
      */
