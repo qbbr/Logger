@@ -2,7 +2,9 @@
 /**
  * Mail
  *
+ * @package Q_Logger
  * @author Sokolov Innokenty, <sokolov.innokenty@gmail.com>
+ * @license http://opensource.org/licenses/MIT MIT License
  * @copyright Copyright (c) 2011, qbbr
  */
 class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
@@ -22,7 +24,7 @@ class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
 
     protected function _write($message, $priority)
     {
-        $subject = 'Log from: ' . Q_Registry::get('settings', 'project_name') . ' [' . $this->priorityCodeToString($priority) . ']';
+        $subject = 'Log [' . $this->priorityCodeToString($priority) . ']';
         $message = 'Datetime: ' . $this->getDateTime() . "\n"
                  . 'Priority: ' . $this->priorityCodeToString($priority) . "\n"
                  . 'IP: ' . $this->getIp() . "\n\n"

@@ -2,7 +2,9 @@
 /**
  * Logger
  *
+ * @package Q_Logger
  * @author Sokolov Innokenty, <sokolov.innokenty@gmail.com>
+ * @license http://opensource.org/licenses/MIT MIT License
  * @copyright Copyright (c) 2011, qbbr
  */
 class Q_Logger
@@ -40,9 +42,10 @@ class Q_Logger
     }
 
     /**
-     *
-     * @param string $message Сообщение
-     * @param integer $priority Приоритет
+     * Write to log
+     * 
+     * @param string $message
+     * @param integer $priority
      */
     public function log($message, $priority = self::LOG_INFO)
     {
