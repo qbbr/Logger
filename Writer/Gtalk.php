@@ -38,7 +38,7 @@ class Q_Logger_Writer_Gtalk extends Q_Logger_Writer_Abstract
 
         curl_setopt($this->_curl, CURLOPT_POSTFIELDS, 'webhookid=' . $this->_webHookId . '&message=' . $message);
         $response = curl_exec($this->_curl);
-        
+
         if ($response != 'Sent') {
             throw new Q_Logger_Writer_Exception("Gtalk: {$response}");
         }

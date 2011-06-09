@@ -82,7 +82,7 @@ abstract class Q_Logger_Writer_Abstract
 
     /**
      * Get client ip
-     * 
+     *
      * @return string
      */
     protected function getIp()

@@ -13,8 +13,8 @@ class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
     protected $_to = '';
 
     /**
-     * @param string $from
      * @param string $to
+     * @param string $from
      */
     public function __construct($to, $from = null)
     {

@@ -10,7 +10,7 @@
 class Q_Logger_Autoloader
 {
     /**
-     * Registers Q_Cache_Autoloader as an SPL autoloader
+     * Registers Q_Logger_Autoloader as an SPL autoloader
      */
     static public function register()
     {
