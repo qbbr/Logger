@@ -1,7 +1,7 @@
 <?php
 /**
  * Libnotify
- * 
+ *
  * Only for CLI, libnotify must be installed
  * (sudo aptitude install libnotify-bin)
  *
@@ -15,7 +15,7 @@ class Q_Logger_Writer_Libnotify extends Q_Logger_Writer_Abstract
     protected $_summary = '';
     protected $_icon = '';
     protected $_expireTime = 5000;
-    
+
     /**
      * @param string $summary
      */
@@ -23,7 +23,7 @@ class Q_Logger_Writer_Libnotify extends Q_Logger_Writer_Abstract
     {
         $this->_summary = $summary;
     }
-    
+
     /**
      * @param string $icon
      */
@@ -31,7 +31,7 @@ class Q_Logger_Writer_Libnotify extends Q_Logger_Writer_Abstract
     {
         $this->_icon = $icon;
     }
-    
+
     /**
      * @param integer $milliseconds
      */
