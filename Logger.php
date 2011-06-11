@@ -24,12 +24,16 @@ class Q_Logger
     protected $_writers = array();
 
     /**
-     * @param array $writers
+     * @param Q_Logger_Writer_Abstract|array $writers
      */
     public function __construct($writers)
     {
-        foreach ($writers as $writer) {
-            $this->addWriter($writer);
+        if (is_array($writers)) {
+            foreach ($writers as $writer) {
+                $this->addWriter($writer);
+            }
+        } else {
+            $this->addWriter($writers);
         }
     }
 
