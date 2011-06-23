@@ -13,6 +13,7 @@
 class Q_Logger_Writer_Gtalk extends Q_Logger_Writer_Abstract
 {
     const URL = 'https://gtalk-hook.appspot.com/ghook';
+
     protected $_webHookId;
     protected $_curl;
 
@@ -31,9 +32,9 @@ class Q_Logger_Writer_Gtalk extends Q_Logger_Writer_Abstract
 
     protected function _write($message, $priority)
     {
-        $message = 'Datetime: ' . $this->getDateTime() . "\n"
-                 . 'Priority: ' . $this->priorityCodeToString($priority) . "\n"
-                 . 'IP: ' . $this->getIp() . "\n\n"
+        $message = 'Datetime: ' . $this->getDateTime() . PHP_EOL
+                 . 'Priority: ' . $this->priorityCodeToString($priority) . PHP_EOL
+                 . 'IP: ' . $this->getIp() . PHP_EOL . PHP_EOL
                  . $message;
 
         curl_setopt($this->_curl, CURLOPT_POSTFIELDS, 'webhookid=' . $this->_webHookId . '&message=' . $message);

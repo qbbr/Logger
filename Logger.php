@@ -47,7 +47,7 @@ class Q_Logger
 
     /**
      * Write to log
-     * 
+     *
      * @param string $message
      * @param integer $priority
      */

@@ -34,9 +34,7 @@ class Q_Logger_Writer_File extends Q_Logger_Writer_Abstract
 
     public function __destruct()
     {
-        if ($this->_file) {
-            fclose($this->_file);
-        }
+        if ($this->_file) fclose($this->_file);
     }
 
     protected function _write($message, $priority)

@@ -9,8 +9,8 @@
  */
 class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
 {
-    protected $_from = '';
-    protected $_to = '';
+    protected $_from;
+    protected $_to;
 
     /**
      * @param string $to
@@ -26,11 +26,11 @@ class Q_Logger_Writer_Mail extends Q_Logger_Writer_Abstract
     {
         $subject = 'Log [' . $this->priorityCodeToString($priority) . ']';
         $message = 'Datetime: ' . $this->getDateTime() . "\n"
-                 . 'Priority: ' . $this->priorityCodeToString($priority) . "\n"
-                 . 'IP: ' . $this->getIp() . "\n\n"
+                 . 'Priority: ' . $this->priorityCodeToString($priority) . PHP_EOL
+                 . 'IP: ' . $this->getIp() . PHP_EOL . PHP_EOL
                  . $message;
 
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
         if (null !== $this->_from) $headers .= "From: {$this->_from}\r\n";
 

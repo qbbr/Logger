@@ -25,7 +25,6 @@ abstract class Q_Logger_Writer_Abstract
     /**
      * Get current datetime
      *
-     * @access protected
      * @return string
      */
     protected function getDateTime()
@@ -36,7 +35,6 @@ abstract class Q_Logger_Writer_Abstract
     /**
      * Get priority name
      *
-     * @access protected
      * @param integer $priority
      * @return string
      */
